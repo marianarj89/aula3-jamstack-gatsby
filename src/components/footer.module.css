@@ -2,6 +2,9 @@
     grid-area: footer;
     background-color: darkslategray;
     padding: 10px;
-    color:darkgrey;
+    color:rgb(233, 233, 233);
     text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }

@@ -18,6 +18,7 @@ const Pagina2 = () => {
   return (
     <Layout>
       <h1>DADOS IBGE - Estados x Municípios</h1>
+      <hr></hr>
       <div>
         <p>Estados:</p>
         <Ufs setOpcaoUf={setOpcaoUf} />
