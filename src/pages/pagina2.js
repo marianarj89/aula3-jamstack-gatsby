@@ -1,25 +1,32 @@
-import React from 'react'
-import Layout from '../components/layout'
+import * as React from "react"
+import {  useEffect } from "react";
+import Layout from "../components/layout"
+import Ufs from "../components/Ufs"
+import Municipios from "../components/Municipios";
 
 const Pagina2 = () => {
-    return (
-        <Layout> 
-        <h1> Essa é a Página 2</h1>    
-        <div>
-            <p>
-            In porta mollis blandit. Nunc vel tempus dui, eu pellentesque diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus scelerisque, eros vel aliquam pretium, est ligula mattis erat, consequat congue est eros a mi. Donec non sem at risus volutpat dapibus vel eu neque. 
-            </p>
 
-            <p>
-            In porta mollis blandit. Nunc vel tempus dui, eu pellentesque diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus scelerisque, eros vel aliquam pretium, est ligula mattis erat, consequat congue est eros a mi. Donec non sem at risus volutpat dapibus vel eu neque. 
-            </p>    
+  const [opcaoUf, setOpcaoUf] = React.useState({ key: "", value: "" });
+  const [opcaoMunicipio, setOpcaoMunicipio] = React.useState({ key: "", value: "", uf: "" });
 
-        </div>
+  useEffect(() => {
+    if (opcaoUf.value.length > 0) {
+      setOpcaoMunicipio({ ...opcaoMunicipio, uf: opcaoUf.key })
+    }
+  }, [opcaoUf]);
 
-        </Layout>
-    )
+  return (
+    <Layout>
+      <h1>DADOS IBGE - Estados x Municípios</h1>
+      <div>
+        <p>Estados:</p>
+        <Ufs setOpcaoUf={setOpcaoUf} />
+        <p>Municípios: <b>{opcaoUf.value}</b></p>
+        <Municipios uf={opcaoUf.key} setOpcaoMunicipio={setOpcaoMunicipio} />
+      </div>
+    </Layout>
+  )
 }
-
 export default Pagina2
 
-export const Head = () => <title>Página 2</title>
+export const Head = () => <title>Dados Externos - IBGE</title>

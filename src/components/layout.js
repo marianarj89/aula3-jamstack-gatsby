@@ -8,8 +8,8 @@ export default function Layout ({ children }) {
             <div className="header">
                 <h3> Mini Projeto Solo JAMstack - Aula 3</h3>
                 <nav className="topnav">
-                    <Link to = "/"> Página Inicial </Link>
-                    <Link to = "/pagina2"> Página 2 </Link>
+                    <Link to = "/"> .: HOME :. </Link>
+                    <Link to = "/pagina2"> Dados Externos - IBGE</Link>
                     <Link to = "/pagina3"> Página 3 </Link>
                 </nav>
             </div>
