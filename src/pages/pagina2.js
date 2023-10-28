@@ -19,3 +19,7 @@ const Pagina2 = () => {
         </Layout>
     )
 }
+
+export default Pagina2
+
+export const Head = () => <title>Página 2</title>

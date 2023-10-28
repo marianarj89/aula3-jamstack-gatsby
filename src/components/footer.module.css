@@ -1,0 +1,7 @@
+.footer {
+    grid-area: footer;
+    background-color: darkslategray;
+    padding: 10px;
+    color:darkgrey;
+    text-align: center;
+}
